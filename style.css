@@ -12,7 +12,7 @@
 .header {
   width: 100%;
   display: inline-block;
-  margin: 20px 0px;
+  margin: 30px 0px;
   color: white;
   font-family: sans-serif;
 }
@@ -32,11 +32,21 @@
   margin-right: 30px;
   flex-direction: column;
 }
+#cancel_hamberger {
+  margin-top: 5px;
+}
 .ham1 {
   background-color: white;
   width: 30px;
   margin-bottom: 5px;
   height: 2px;
+}
+.otherham1 {
+  transform: rotateZ(45deg);
+}
+.otherham2 {
+  margin-top: -6px;
+  transform: rotateZ(-45deg);
 }
 .on {
   margin-right: 20px;
@@ -46,7 +56,7 @@
   top: 0;
   left: 0;
   width: 100vw;
-  transform: scaleX(0);
+  transform: translateX(-100%);
   height: 100vh;
   background-image: url("./assest/top2.png");
   transition: 1s;
@@ -81,16 +91,152 @@
   font-size: 10px;
 }
 .mainpage_headline_content {
-  background-color: white;
+  background-color: transparent;
   padding: 15px 40px 10px 40px;
   line-height: 2.5;
-  color: dimgrey;
   font-size: 10px;
   text-align: center;
+  border: 0.25px solid white;
+  border-radius: 5px;
 }
 .mainpage_headline_content > a {
   text-decoration: underline;
 }
 .mainpage_headline_content > p {
   margin-top: 15px;
+}
+#cursor_boundary {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 60px;
+  border: 0.25px solid white;
+  border-radius: 50%;
+  z-index: 0;
+}
+.category {
+  width: 15%;
+  padding: 30px;
+  display: inline-block;
+}
+.category1,
+.category2,
+.category3 {
+  display: flex;
+  padding: 20px;
+  margin-bottom: 44px;
+  align-items: center;
+  justify-content: space-between;
+}
+.spa,
+.nail,
+.hair,
+.product,
+.beauty,
+.promotion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Just Another Hand", cursive;
+}
+.spa_circle,
+.nail_circle,
+.hair_circle,
+.product_circle,
+.beauty_circle,
+.promotion_circle {
+  height: 60px;
+  width: 60px;
+  border: 0.25px solid white;
+  border-radius: 50%;
+  margin-bottom: 5px;
+}
+.spa_circle {
+  transition: 1s;
+  border: 1px solid #8dbfbe;
+}
+.spa_circle:hover {
+  background-color: #8dbfbe;
+  transform: scale(0.5);
+}
+.nail_circle {
+  transition: 1s;
+  border: 1px solid #ca8fc7;
+}
+.nail_circle:hover {
+  background-color: #ca8fc7;
+  transform: scale(0.5);
+}
+.hair_circle {
+  transition: 1s;
+  border: 1px solid #c2aa6c;
+}
+.hair_circle:hover {
+  background-color: #c2aa6c;
+  transform: scale(0.5);
+}
+.product_circle {
+  transition: 1s;
+  border: 1px solid #e9e2e1;
+}
+.product_circle:hover {
+  background-color: #e9e2e1;
+  transform: scale(0.5);
+}
+.beauty_circle {
+  transition: 1s;
+  border: 1px solid #d79b89;
+}
+.beauty_circle:hover {
+  background-color: #d79b89;
+  transform: scale(0.5);
+}
+.promotion_circle {
+  transition: 1s;
+  border: 1px solid #97bee9;
+}
+.promotion_circle:hover {
+  background-color: #97bee9;
+  transform: scale(0.5);
+}
+.spa {
+  color: #8dbfbe;
+  margin-right: 40px;
+}
+.nail {
+  color: #ca8fc7;
+}
+.hair {
+  color: #c2aa6c;
+  margin-right: 40px;
+}
+.product {
+  color: #e9e2e1;
+}
+.beauty {
+  color: #d79b89;
+  margin-right: 40px;
+}
+.promotion {
+  color: #97bee9;
+}
+.overlay_content{
+  display: inline-block;
+  margin: 40px 100px;
+}
+.overlay_content >ul{
+  list-style: none;
+  display: inline-block;
+}
+.overlay_content >ul >li{
+  text-decoration: none;
+  color: white;
+  font-family: "Lato", sans-serif;
+  margin: 10px 0px;
+  font-size: 25px;
+}
+.overlay_content >ul >li:hover{
+  cursor: pointer;
+  color: rgb(202,143,199);
 }
